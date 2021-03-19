@@ -39,7 +39,14 @@ namespace SF5._2
                     return color;
             }
         }
-
+        static void ShowColors(string[] favcolors)
+        {
+            Console.WriteLine("Ваши любимые цвета:");
+            foreach (var color in favcolors)
+            {
+                Console.WriteLine(color);
+            }
+        }
         static void Main(string[] args)
         {
             var (name, age) = ("Евгения", 276);
@@ -66,12 +73,7 @@ namespace SF5._2
                 favcolors[i] = ShowColor(name, age);
             }
 
-            Console.WriteLine("Любимые цвета:");
-
-            foreach (var color in favcolors)
-            {
-                Console.WriteLine(color);
-            }
+            ShowColors(favcolors);
         }
     }
 }

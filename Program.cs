@@ -4,9 +4,9 @@ namespace SF5._2
 {
     class Program
     {
-        static string ShowColor(string username)
+        static string ShowColor(string username, int userage)
         {
-            Console.WriteLine("{0}, напиши свой любимый цвет на английском с маленькой буквы:", username);
+            Console.WriteLine("{0} возрастом {1} лет (мы почти всё про тебя знаем!),\nнапиши свой любимый цвет на английском с маленькой буквы:", username, userage);
             string color = Console.ReadLine();
 
             switch (color)
@@ -63,7 +63,7 @@ namespace SF5._2
 
             for (int i = 0; i < favcolors.Length; i++)
             {
-                favcolors[i] = ShowColor(name);
+                favcolors[i] = ShowColor(name, age);
             }
 
             Console.WriteLine("Любимые цвета:");
